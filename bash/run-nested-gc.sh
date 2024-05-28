@@ -79,7 +79,8 @@ for run in base pert-{0..11}; do
         # Modify the run script then submit it
         cp runScriptSamples/operational_examples/harvard_cannon/geoschem.run .
         sed -i -e "s|-c 8|-c 32|g" \
-            -e "s|0-12:00|0-24:00|g" geoschem.run
+            -e "s|0-12:00|0-24:00|g" \
+            -e "/,shared/d" geoschem.run
         sbatch geoschem.run
 
     done
