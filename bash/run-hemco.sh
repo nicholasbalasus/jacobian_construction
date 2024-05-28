@@ -29,7 +29,7 @@ for domain in global nested; do
     make install
 
     # Compile HEMCO for GEOS-FP
-    # 2 x 2.5 for global and 0.25 x 0.3125 for nested
+    # 4 x 5 for global and 0.5 x 0.625 NA for nested
     cd "${emis_dir}/${gc_dir}/CodeDir/src/HEMCO/run"
     HEMCO_Config="${emis_dir}/${gc_dir}/HEMCO_Config.rc"
     hemco_dir="${domain}_hemco"
